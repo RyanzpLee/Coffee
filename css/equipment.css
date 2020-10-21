@@ -1,0 +1,446 @@
+.background {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/images/coffee.jpg');
+  background-position: center -30%; 
+}
+
+.equipment {
+  width: 100%;
+  display: flex;
+  background-color: rgb(31, 32, 41);
+  padding: 40px;
+}
+
+
+.intro {
+  text-align: center;
+}
+
+.equipment-container {
+  padding: 20px;
+}
+
+html.modal-active,
+body.modal-active {
+  overflow: hidden;
+}
+
+/* Hario V60 */
+#modal-container {
+  position: fixed;
+  display: table;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  z-index: 1;
+}
+#modal-container.modal {
+  transform: scale(1);
+}
+#modal-container.modal .modal-background .modal {
+  opacity: 0;
+  animation: scaleUp 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container.modal.out {
+  animation: quickScaleDown 0s 0.5s linear forwards;
+}
+#modal-container.modal.out .modal-background .modal {
+  animation: scaleDown 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container .modal-background {
+  display: table-cell;
+  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  vertical-align: middle;
+}
+#modal-container .modal-background .modal {
+  padding: 50px;
+  display: inline-block;
+  border-radius: 3px;
+  font-weight: 300;
+  position: relative;
+}
+#modal-container .modal-background .modal h2 {
+  font-size: 25px;
+  line-height: 25px;
+  margin-bottom: 15px;
+}
+#modal-container .modal-background .modal p {
+  font-size: 18px;
+  line-height: 22px;
+}
+#modal-container .modal-background .modal .modal-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 3px;
+}
+#modal-container .modal-background .modal .modal-svg rect {
+  stroke: #fff;
+  stroke-width: 2px;
+  stroke-dasharray: 778;
+  stroke-dashoffset: 778;
+}
+
+/* kalita wave */
+#kalita-modal-container {
+  position: fixed;
+  display: table;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  z-index: 1;
+}
+#kalita-modal-container.kalita {
+  transform: scale(1);
+}
+#kalita-modal-container.kalita .kalita-background .kalita {
+  opacity: 0;
+  animation: scaleUp 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#kalita-modal-container.kalita.out {
+  animation: quickScaleDown 0s 0.5s linear forwards;
+}
+#kalita-modal-container.kalita.out .kalita-background .kalita {
+  animation: scaleDown 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#kalita-modal-container .kalita-background {
+  display: table-cell;
+  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  vertical-align: middle;
+}
+#kalita-modal-container .kalita-background .kalita {
+  padding: 50px;
+  display: inline-block;
+  border-radius: 3px;
+  font-weight: 300;
+  position: relative;
+}
+#kalita-modal-container .kalita-background .kalita h2 {
+  font-size: 25px;
+  line-height: 25px;
+  margin-bottom: 15px;
+}
+#kalita-modal-container .kalita-background .kalita p {
+  font-size: 18px;
+  line-height: 22px;
+}
+#kalita-modal-container .kalita-background .kalita .kalita-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 3px;
+}
+#kalita-modal-container .kalita-background .kalita .kalita-svg rect {
+  stroke: #fff;
+  stroke-width: 2px;
+  stroke-dasharray: 778;
+  stroke-dashoffset: 778;
+}
+
+/* aeropress */
+#aeropress-modal-container {
+  position: fixed;
+  display: table;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  z-index: 1;
+}
+#aeropress-modal-container.aeropress {
+  transform: scale(1);
+}
+#aeropress-modal-container.aeropress .aeropress-background .aeropress {
+  opacity: 0;
+  animation: scaleUp 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#aeropress-modal-container.aeropress.out {
+  animation: quickScaleDown 0s 0.5s linear forwards;
+}
+#aeropress-modal-container.aeropress.out .aeropress-background .aeropress {
+  animation: scaleDown 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#aeropress-modal-container .aeropress-background {
+  display: table-cell;
+  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  vertical-align: middle;
+}
+#aeropress-modal-container .aeropress-background .aeropress {
+  padding: 50px;
+  display: inline-block;
+  border-radius: 3px;
+  font-weight: 300;
+  position: relative;
+}
+#aeropress-modal-container .aeropress-background .aeropress h2 {
+  font-size: 25px;
+  line-height: 25px;
+  margin-bottom: 15px;
+}
+#aeropress-modal-container .aeropress-background .aeropress p {
+  font-size: 18px;
+  line-height: 22px;
+}
+#aeropress-modal-container .aeropress-background .aeropress .aeropress-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 3px;
+}
+#aeropress-modal-container .aeropress-background .aeropress .aeropress-svg rect {
+  stroke: #fff;
+  stroke-width: 2px;
+  stroke-dasharray: 778;
+  stroke-dashoffset: 778;
+}
+
+/* chemex */
+#chemex-modal-container {
+  position: fixed;
+  display: table;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  z-index: 1;
+}
+#chemex-modal-container.chemex {
+  transform: scale(1);
+}
+#chemex-modal-container.chemex .chemex-background .chemex {
+  opacity: 0;
+  animation: scaleUp 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#chemex-modal-container.chemex.out {
+  animation: quickScaleDown 0s 0.5s linear forwards;
+}
+#chemex-modal-container.chemex.out .chemex-background .chemex {
+  animation: scaleDown 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#chemex-modal-container .chemex-background {
+  display: table-cell;
+  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  vertical-align: middle;
+}
+#chemex-modal-container .chemex-background .chemex {
+  padding: 50px;
+  display: inline-block;
+  border-radius: 3px;
+  font-weight: 300;
+  position: relative;
+}
+#chemex-modal-container .chemex-background .chemex h2 {
+  font-size: 25px;
+  line-height: 25px;
+  margin-bottom: 15px;
+}
+#chemex-modal-container .chemex-background .chemex p {
+  font-size: 18px;
+  line-height: 22px;
+}
+#chemex-modal-container .chemex-background .chemex .chemex-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 3px;
+}
+#chemex-modal-container .chemex-background .chemex .chemex-svg rect {
+  stroke: #fff;
+  stroke-width: 2px;
+  stroke-dasharray: 778;
+  stroke-dashoffset: 778;
+}
+
+/* french press */
+#french-modal-container {
+  position: fixed;
+  display: table;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  z-index: 1;
+}
+#french-modal-container.french {
+  transform: scale(1);
+}
+#french-modal-container.french .french-background .french {
+  opacity: 0;
+  animation: scaleUp 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#french-modal-container.french.out {
+  animation: quickScaleDown 0s 0.5s linear forwards;
+}
+#french-modal-container.french.out .french-background .french {
+  animation: scaleDown 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#french-modal-container .french-background {
+  display: table-cell;
+  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  vertical-align: middle;
+}
+#french-modal-container .french-background .french {
+  padding: 50px;
+  display: inline-block;
+  border-radius: 3px;
+  font-weight: 300;
+  position: relative;
+}
+#french-modal-container .french-background .french h2 {
+  font-size: 25px;
+  line-height: 25px;
+  margin-bottom: 15px;
+}
+#french-modal-container .french-background .french p {
+  font-size: 18px;
+  line-height: 22px;
+}
+#french-modal-container .french-background .french .french-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 3px;
+}
+#french-modal-container .french-background .french .french-svg rect {
+  stroke: #fff;
+  stroke-width: 2px;
+  stroke-dasharray: 778;
+  stroke-dashoffset: 778;
+}
+
+/* espresso */
+#espresso-modal-container {
+  position: fixed;
+  display: table;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  z-index: 1;
+}
+#espresso-modal-container.espresso {
+  transform: scale(1);
+}
+#espresso-modal-container.espresso .espresso-background .espresso {
+  opacity: 0;
+  animation: scaleUp 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#espresso-modal-container.espresso.out {
+  animation: quickScaleDown 0s 0.5s linear forwards;
+}
+#espresso-modal-container.espresso.out .espresso-background .espresso {
+  animation: scaleDown 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#espresso-modal-container .espresso-background {
+  display: table-cell;
+  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  vertical-align: middle;
+}
+#espresso-modal-container .espresso-background .espresso {
+  padding: 50px;
+  display: inline-block;
+  border-radius: 3px;
+  font-weight: 300;
+  position: relative;
+}
+#espresso-modal-container .espresso-background .espresso h2 {
+  font-size: 25px;
+  line-height: 25px;
+  margin-bottom: 15px;
+}
+#espresso-modal-container .espresso-background .espresso p {
+  font-size: 18px;
+  line-height: 22px;
+}
+#espresso-modal-container .espresso-background .espresso .espresso-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 3px;
+}
+#espresso-modal-container .espresso-background .espresso .espresso-svg rect {
+  stroke: #fff;
+  stroke-width: 2px;
+  stroke-dasharray: 778;
+  stroke-dashoffset: 778;
+}
+
+.content {
+  min-height: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 0;
+}
+
+.content .buttons {
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+.content .buttons .button {
+  display: inline-block;
+  text-align: center;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+.content .buttons .button:hover {
+  transform: scale(1.05);
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.8) translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes scaleDown {
+  0% {
+    transform: scale(1) translateY(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8) translateY(1000px);
+    opacity: 0;
+  }
+}
+@keyframes quickScaleDown {
+  0% {
+    transform: scale(1);
+  }
+  99.9% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}

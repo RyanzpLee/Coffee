@@ -1,6 +1,6 @@
 .background {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/coffee.jpg');
-  background-position: center -30%; 
+  background-position: center -30%;
 }
 
 .equipment {
@@ -9,7 +9,6 @@
   background-color: rgb(31, 32, 41);
   padding: 40px;
 }
-
 
 .intro {
   text-align: center;

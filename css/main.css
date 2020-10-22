@@ -1,7 +1,7 @@
 .welcome {
   position: relative;
   width: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/images/hand.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('images/hand.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;

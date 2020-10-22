@@ -40,7 +40,6 @@ a, a:visited, a:hover {
 .background {
   position: relative;
   width: 100%;
-  background-size: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height: 400px;

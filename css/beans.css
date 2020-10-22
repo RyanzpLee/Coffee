@@ -1,6 +1,7 @@
 .background {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/coffee-beans.jpeg');
   background-position: center 0;
+  background-size: 100vh;
 }
 
 .beans {
@@ -9,7 +10,6 @@
   background-color: rgb(31, 32, 41);
   padding: 40px;
 }
-
 
 .intro {
   text-align: center;

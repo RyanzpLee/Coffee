@@ -1,6 +1,7 @@
 .background {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/coffee.jpg');
-  background-position: center -30%;
+  background-position: top;
+  background-size: 100vh;
 }
 
 .equipment {
